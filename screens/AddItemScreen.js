@@ -18,7 +18,6 @@ const AddItemScreen = ({ route }) => {
     const [images, setImages] = useState([]); // Array to store selected image URIs
     const [profilePicture, setProfilePicture] = useState('');
 
-
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images, // Only allow images
@@ -142,7 +141,7 @@ const AddItemScreen = ({ route }) => {
                         <Text style={styles.buttonText}>Pick 3 Images</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
-                        <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='black' /></Text>
+                        <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{
@@ -196,7 +195,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 60,
-        marginTop: 20,
+        marginTop: 40,
         fontWeight: 'bold'
     },
     subTitle: {
@@ -216,35 +215,36 @@ const styles = StyleSheet.create({
     },
     button: {
         width: '70%',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 1,
         padding: 10
     },
     saveButton: {
         width: '40%',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 1,
         padding: 10
     },
     cameraButton: {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
-        borderColor: 'black',
+        borderColor: 'white',
         borderWidth: 1,
         padding: 10
     },
     buttonText: {
-        color: 'black',
+        color: 'white',
+        fontWeight: 'bold',
         fontSize: 18,
         lineHeight: 25
     },

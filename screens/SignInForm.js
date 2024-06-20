@@ -134,16 +134,17 @@ const styles = StyleSheet.create({
     button: {
         width: '40%',
         height: 40,
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
         marginBottom: 20,
-        borderColor: 'black',
-        borderWidth: 1
+        borderColor: 'white',
+        borderWidth: 1,
     },
     buttonText: {
-        color: 'black',
+        color: 'white',
+        fontWeight: 'bold',
         fontSize: 18,
         lineHeight: 25
     }

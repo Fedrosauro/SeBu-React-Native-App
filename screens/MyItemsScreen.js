@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 60,
-    marginTop: 20,
+    marginTop: 40,
     fontWeight: 'bold',
     marginBottom: 30
   }

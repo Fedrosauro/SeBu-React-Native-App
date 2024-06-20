@@ -150,7 +150,7 @@ const ProfileScreen = ({ route }) => {
             <Text style={styles.buttonText}>Change profile picture</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
-            <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='black' /></Text>
+            <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
           </TouchableOpacity>
         </View>
 
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 60,
-    marginTop: 20,
+    marginTop: 40,
     fontWeight: 'bold'
   },
   subTitle: {
@@ -205,25 +205,25 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '40%',
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
-    borderColor: 'black',
+    borderColor: 'white',
     borderWidth: 1,
     padding: 10
   },
   profileButton: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
-    borderColor: 'black',
+    borderColor: 'white',
     borderWidth: 1,
     padding: 10,
   },
   cameraButton: {
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
@@ -232,7 +232,8 @@ const styles = StyleSheet.create({
     padding: 10
   },
   buttonText: {
-    color: 'black',
+    color: 'white',
+    fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 25
   },
