@@ -39,5 +39,18 @@ they left off and personalize the app to their liking. AsyncStorage has been als
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/sebu.git
-   cd sebu
+   git clone https://github.com/Fedrosauro/SeBu-React-Native-App.git
+   ```
+
+2. Open the folder in VS Code
+3. Install dependencies:
+
+    ```bash
+      npm install
+      ```
+4. Run the application:
+
+    ```bash
+      npx expo start
+      ```
+5. Enjoy
