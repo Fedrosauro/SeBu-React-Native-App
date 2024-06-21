@@ -1,4 +1,4 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators  } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { Image } from 'react-native';
@@ -180,7 +180,8 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SignInForm"
         screenOptions={{
-          headerShown: false
+          headerShown: false,
+          cardStyleInterpolator: CardStyleInterpolators.forScaleFromCenterAndroid,
         }}>
         <Stack.Screen name="SignInForm" component={SignInForm} />
         <Stack.Screen name="MainScreen" component={MainScreen} />
