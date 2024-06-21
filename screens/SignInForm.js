@@ -56,7 +56,7 @@ const SignInForm = ({ navigation }) => {
             source={require('../assets/images/background_image.jpg')}
             style={styles.container}
             >
-            <Text style={styles.title}>¡Sebu!</Text>
+            <Text style={styles.title}>¡SeBu!</Text>
             <Text style={styles.subTitle}>Username</Text>
             <TextInput style={styles.input}
                 placeholder="Username"
