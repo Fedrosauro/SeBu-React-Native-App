@@ -52,3 +52,8 @@ they left off and personalize the app to their liking. AsyncStorage has been als
     npx expo start
       ```
 5. Enjoy!
+
+## Credentials available at start:
+- **usernames** : mario, matteo, anna, monica, andrea, giulia
+
+Each **password** of each user is the *username*
