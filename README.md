@@ -20,7 +20,7 @@ Whatsapp, Telegram, or Instagram to contact the object owner
 ## Data Persistence and Personalization
 
 ¡SeBu! utilizes ```AsyncStorage``` to provide a persistent storage solution for user data. This ensures that information like favorites, login credentials, and potentially even user preferences are preserved across app sessions. This enhances the user experience by allowing them to pick up where 
-they left off and personalize the app to their liking. AsyncStorage has been also used to save the items.
+they left off. AsyncStorage has been also used to save the items.
 
 ## Enhanced User Experience:
 - **Favorite Items** : Users can mark items as favorites for quick and easy access later. These selections are persisted using AsyncStorage, making your favorites readily available even after restarting the app.
