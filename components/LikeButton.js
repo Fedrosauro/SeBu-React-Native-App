@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons'; // Assuming you're using Expo, if not, adjust the import accordingly
+import { FontAwesome } from '@expo/vector-icons';
 
 const LikeButton = ({ onPress, favourites, username }) => {
     const isFavorited = favourites.includes(username);

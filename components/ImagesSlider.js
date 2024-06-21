@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { Button, Image, View, StyleSheet, FlatList, useWindowDimensions, Text } from 'react-native';
+import { Image, View, StyleSheet, FlatList } from 'react-native';
 import uuid from 'react-native-uuid';
 
 const ImagesSlider = ({ images }) => {
