@@ -1,6 +1,6 @@
 <h1 align="center">Selling And Buying React Native Application</h1>
 
-¡SeBu! (the name of this app) is a React Native marketplace application designed to help users list, browse, and favorite items for sale. The app features a clean and user-friendly interface, allowing for seamless navigation and interaction.
+¡SeBu! (the name of this app) is a React Native application designed to help users list, browse, and favorite items for sale. The app features a clean and user-friendly interface, allowing for seamless navigation and interaction.
 
 ## Screens
 
