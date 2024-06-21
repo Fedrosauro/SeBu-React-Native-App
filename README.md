@@ -29,7 +29,7 @@ they left off. AsyncStorage has been also used to save the items.
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/Fedrosauro/SeBu-React-Native-App/assets/67149530/23312039-b6bf-4f85-8fc9-19b7ef11f02e">
+  <img src="https://github.com/Fedrosauro/SeBu-React-Native-App/assets/67149530/8fe71ff6-f719-4f10-8595-ab1c14e6666d">
 </p>
 
 ## Installation
