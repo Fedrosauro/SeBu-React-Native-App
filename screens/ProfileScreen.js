@@ -36,7 +36,6 @@ const ProfileScreen = ({ route }) => {
       const updatedInfo = { password, name, surname, email, profilePicture }; // Create a new object with updated fields (excluding password)
       const jsonValue = JSON.stringify(updatedInfo);
       await AsyncStorage.setItem(username, jsonValue);
-      console.log("Modifications for user: " + username + " done" + "\n" + jsonValue);
     } catch (e) {
       console.error('Error in modify user:', e);
     }

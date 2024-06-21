@@ -37,8 +37,8 @@ const HomeScreen = ({ route }) => {
         item.itemDescr.includes(query) ||
         item.itemCity.includes(query)
       ))
-    } else {
-      loadItemsFromStorage();
+    } else if (!query) {
+      loadItemsFromStorage().then();
     }
   }
 

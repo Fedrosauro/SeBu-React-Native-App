@@ -14,7 +14,6 @@ const HomeScreen = ({ route }) => {
       const items = await getItems();
       const filteredItems = items.filter(item => item.username !== username);
       setItems(filteredItems);
-      console.log(filteredItems)
     } catch (error) {
       console.error('Error loading TODOs:', error);
     }

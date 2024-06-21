@@ -15,7 +15,6 @@ const HomeScreen = ({ route }) => {
       const items = await getItems();
       const filteredItems = items.filter(item => item.username === username);
       setItems(filteredItems);
-      console.log(filteredItems)
     } catch (error) {
       console.error('Error loading TODOs:', error);
     }
@@ -41,11 +40,7 @@ const HomeScreen = ({ route }) => {
 
   useFocusEffect(
     React.useCallback(() => {
-      console.log("HomeScreen gained focus");
       loadItemsFromStorage();
-      return () => {
-        // This cleanup function will run when the screen loses focus
-      };
     }, [])
   );
 

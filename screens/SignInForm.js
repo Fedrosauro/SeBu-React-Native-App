@@ -16,7 +16,6 @@ const SignInForm = ({ navigation }) => {
             const itemParsed = jsonValue != null ? JSON.parse(jsonValue) : null;
 
             if (itemParsed.password === password) {
-                console.log("Correct Password for user: " + JSON.stringify(itemParsed));
                 navigation.navigate('MainScreen', {
                     username: user,
                 });
@@ -43,7 +42,6 @@ const SignInForm = ({ navigation }) => {
             await AsyncStorage.setItem(username, jsonValue);
             setUsername('');
             setPassword('');
-            console.log("Registration done for user: " + jsonValue);
         } catch (e) {
             console.log('Error in storing data:', e);
         }
