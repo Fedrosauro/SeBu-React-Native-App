@@ -29,10 +29,8 @@ they left off and personalize the app to their liking. AsyncStorage has been als
 ## Screenshot
 
 <p align="center">
-  <img src="https://github.com/Fedrosauro/SeBu-React-Native-App/assets/67149530/d9ff830c-3d60-492a-8cf7-3cf0354e99a1">
+  <img src="https://github.com/Fedrosauro/SeBu-React-Native-App/assets/67149530/23312039-b6bf-4f85-8fc9-19b7ef11f02e">
 </p>
-
-
 
 ## Installation
 
