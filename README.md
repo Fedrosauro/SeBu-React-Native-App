@@ -1,4 +1,4 @@
-<h1>¡Sebu!</h1>
+<h1 align="center">¡SeBu!</h1>
 
 ¡SeBu! is a React Native marketplace application designed to help users list, browse, and favorite items for sale. The app features a clean and user-friendly interface, allowing for seamless navigation and interaction.
 
@@ -42,15 +42,15 @@ they left off and personalize the app to their liking. AsyncStorage has been als
    git clone https://github.com/Fedrosauro/SeBu-React-Native-App.git
    ```
 
-2. Open the folder in VS Code
+2. Open the repo folder in VS Code
 3. Install dependencies:
 
     ```bash
-      npm install
+    npm install
       ```
 4. Run the application:
 
     ```bash
-      npx expo start
+    npx expo start
       ```
 5. Enjoy
