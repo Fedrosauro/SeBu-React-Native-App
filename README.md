@@ -4,8 +4,8 @@
 
 ## Features
 
-- **Home Screen** : The Home screen allows users to browse items available for sale. Users can search for specific items using the search bar. Items cannot be purchase directly in the application but a customer can
-  contact the owner of the object to buy the object
+- **Home Screen** : The Home screen allows users to browse items available for sale. Users can search for specific items using the search bar. Items cannot be purchase directly in the application but a customer can contact the owner of the object to buy the object. A customer can use
+Whatsapp, Telegram, or Instagram to contact the object owner
 
 - **My Items** : The My Items screen displays the items listed by the user, including details like the item name, description, price, and location.
 
