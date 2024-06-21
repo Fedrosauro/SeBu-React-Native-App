@@ -2,7 +2,7 @@
 
 ¡SeBu! (the name of this app) is a React Native marketplace application designed to help users list, browse, and favorite items for sale. The app features a clean and user-friendly interface, allowing for seamless navigation and interaction.
 
-## Features
+## Screens
 
 - **Home Screen** : The Home screen allows users to browse items available for sale. Users can search for specific items using the search bar. Items cannot be purchase directly in the application but a customer can contact the owner of the object to buy the object. A customer can use
 Whatsapp, Telegram, or Instagram to contact the object owner
