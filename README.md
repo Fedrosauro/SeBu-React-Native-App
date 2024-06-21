@@ -51,4 +51,4 @@ they left off and personalize the app to their liking. AsyncStorage has been als
     ```bash
     npx expo start
       ```
-5. Enjoy
+5. Enjoy!
