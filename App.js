@@ -32,8 +32,6 @@ const Stack = createStackNavigator();
 
 const App = () => {
 
-  AsyncStorage.clear();
-
   const loadUsers = async () => {
     users = ["mario", "matteo", "anna", "monica", "andrea", "giulia"]
     imageProf = ''
@@ -64,9 +62,9 @@ const App = () => {
         const profileIdentity = {
           username: user,
           password: user,
-          name: '',
-          surname: '',
-          email: '',
+          name: 'test_name',
+          surname: 'test_surname',
+          email: 'test_email',
           favourites: {},
           myItems: {},
           profilePicture: imageProf,
@@ -166,13 +164,13 @@ const App = () => {
       }
       try {
         await addItem(item);
-        console.log("item added");
       } catch (error) {
         console.error('Error adding item:', error);
       }
     }
   }
 
+  AsyncStorage.clear();
   loadUsers();
   loadPosts();
 

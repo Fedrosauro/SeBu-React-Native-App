@@ -31,9 +31,9 @@ const SignInForm = ({ navigation }) => {
             const profileIdentity = {
                 username: username,
                 password: psw,
-                name: '',
-                surname: '',
-                email: '',
+                name: 'test_name',
+                surname: 'test_surname',
+                email: 'test_email',
                 favourites: {},
                 myItems: {},
                 profilePicture: profimage
@@ -90,6 +90,14 @@ const SignInForm = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={() => handleRegistration(username, password)}>
                 <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
+            <Text style={styles.warningText}>For <Text style={{fontWeight: "bold"}}>testing purposes</Text> every time the application
+                starts these lines are executed in the <Text style={{fontWeight: "bold"}}>App.js</Text> file:{"\n"}
+                {"\t\t"}- <Text style={{fontWeight: "bold"}}>AsyncStorage.clear(); </Text>{"\n"} 
+                {"\t\t"}- <Text style={{fontWeight: "bold"}}>loadUsers();</Text>{"\n"}
+                {"\t\t"}- <Text style={{fontWeight: "bold"}}>loadPosts();</Text>{"\n"}
+                If you want to persist data, after the first lunch of the
+                application, comment those lines with <Text style={{fontWeight: "bold"}}>//</Text>
+            </Text>
         </ImageBackground>
     );
 };
@@ -149,6 +157,15 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 18,
         lineHeight: 25
+    },
+    warningText: {
+        fontSize: 15,
+        padding: 10,
+        backgroundColor: '#ffffe0',
+        color: '#66554b',
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: '#ffffe0'
     }
 });
 
