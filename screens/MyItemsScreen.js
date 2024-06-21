@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { getItems, addFavourite, deleteItem } from '../Data';
@@ -50,23 +50,24 @@ const HomeScreen = ({ route }) => {
   );
 
   return (
-    <ScrollView>
-      <View
-        style={styles.container}
-      >
-        <Text style={styles.title}>My Items</Text>
-
-        <ItemsList
-          items={items}
-          addFavourite={addFavouriteToItem}
-          username={username}
-          location="myItems"
-          deleteItem={deleteItemFromStorage}
+    <ImageBackground source={require('../assets/images/background_image.jpg')}>
+      <ScrollView>
+        <View
+          style={styles.container}
         >
-        </ItemsList>
-      </View>
-    </ScrollView>
+          <Text style={styles.title}>My Items</Text>
 
+          <ItemsList
+            items={items}
+            addFavourite={addFavouriteToItem}
+            username={username}
+            location="myItems"
+            deleteItem={deleteItemFromStorage}
+          >
+          </ItemsList>
+        </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

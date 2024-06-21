@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { getItems, addFavourite } from '../Data';
@@ -36,18 +36,20 @@ const HomeScreen = ({ route }) => {
   );
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.title}>Favourites</Text>
-        <ItemsList
-          items={items}
-          addFavourite={addFavouriteToItem}
-          username={username}
-          location="favourites"
-        >
-        </ItemsList>
-      </View>
-    </ScrollView>
+    <ImageBackground source={require('../assets/images/background_image.jpg')}>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.title}>Favourites</Text>
+          <ItemsList
+            items={items}
+            addFavourite={addFavouriteToItem}
+            username={username}
+            location="favourites"
+          >
+          </ItemsList>
+        </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
@@ -57,15 +59,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 100
-  },
-  input: {
-    width: '70%',
-    height: 50,
-    borderWidth: 2,
-    borderColor: '#ccc',
-    borderRadius: 20,
-    marginBottom: 20,
-    paddingHorizontal: 10,
   },
   title: {
     fontSize: 60,

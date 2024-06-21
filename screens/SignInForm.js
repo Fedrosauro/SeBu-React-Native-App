@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import emptyProfilePic from '../assets/images/black_profile_picture.png'
@@ -54,7 +54,10 @@ const SignInForm = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.container}>
+        <ImageBackground
+            source={require('../assets/images/background_image.jpg')}
+            style={styles.container}
+            >
             <Text style={styles.title}>¡Sebu!</Text>
             <Text style={styles.subTitle}>Username</Text>
             <TextInput style={styles.input}
@@ -89,7 +92,7 @@ const SignInForm = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={() => handleRegistration(username, password)}>
                 <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
-        </View>
+        </ImageBackground>
     );
 };
 

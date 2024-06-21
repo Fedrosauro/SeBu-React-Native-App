@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import React, { useState } from 'react';
@@ -49,36 +49,37 @@ const HomeScreen = ({ route }) => {
   );
 
   return (
-
-    <ScrollView>
-      <View
-        style={styles.container}
-      >
-        <Text style={styles.title}>Home</Text>
-        <View style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'row',
-          marginBottom: 20
-        }}>
-          <TextInput style={styles.input}
-            placeholder="Query"
-            value={query} onChangeText={setQuery}
-          />
-          <TouchableOpacity style={styles.searchButton} onPress={filterItems}>
-            <FontAwesome5 name="search" color={"black"} size={20} />
-          </TouchableOpacity>
-        </View>
-        <ItemsList
-          items={items}
-          addFavourite={addFavouriteToItem}
-          username={username}
-          location='home'
-          deleteItem={null}
+    <ImageBackground source={require('../assets/images/background_image.jpg')}>
+      <ScrollView>
+        <View
+          style={styles.container}
         >
-        </ItemsList>
-      </View>
-    </ScrollView>
+          <Text style={styles.title}>Home</Text>
+          <View style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'row',
+            marginBottom: 20
+          }}>
+            <TextInput style={styles.input}
+              placeholder="Query"
+              value={query} onChangeText={setQuery}
+            />
+            <TouchableOpacity style={styles.searchButton} onPress={filterItems}>
+              <FontAwesome5 name="search" color={"black"} size={20} />
+            </TouchableOpacity>
+          </View>
+          <ItemsList
+            items={items}
+            addFavourite={addFavouriteToItem}
+            username={username}
+            location='home'
+            deleteItem={null}
+          >
+          </ItemsList>
+        </View>
+      </ScrollView>
+    </ImageBackground >
   );
 };
 
@@ -102,10 +103,10 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 20,
     paddingHorizontal: 10,
-    backgroundColor: '#e1e1e1',
+    backgroundColor: 'white',
   },
   searchButton: {
-    backgroundColor: '#e1e1e1',
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,

@@ -37,14 +37,15 @@ const InterestedButton = () => {
                 <View style={styles.modalContent}>
                     <Text style={{
                         marginBottom: 15,
-                        fontSize: 30
+                        fontSize: 30,
+                        fontWeight: 'bold'
                     }}>Contacts</Text>
                     <View style={styles.modalContentIcons}>
                         <TouchableOpacity onPress={() => openApp('whatsapp')}>
-                            <FontAwesome5 name="whatsapp" size={50} color="black" />
+                            <FontAwesome5 name="whatsapp" size={50} color="#24CC63" />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => openApp('telegram')}>
-                            <FontAwesome5 name="telegram" size={50} color="black" />
+                            <FontAwesome5 name="telegram" size={50} color="#26A3E2" />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => openApp('instagram')}>
                             <FontAwesome5 name="instagram" size={50} color="black" />

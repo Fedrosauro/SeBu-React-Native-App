@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
@@ -91,74 +91,77 @@ const ProfileScreen = ({ route }) => {
   }, []);
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.title}>Profile</Text>
-        {profilePicture && (
-          <Image source={{ uri: profilePicture }} style={styles.profilePicture} />
-        )}
-        <Text style={styles.subTitle}>Password</Text>
-        <View style={styles.passContainer}>
-          <TextInput style={{
-            width: '90%',
-            height: '100%',
-          }}
-            placeholder="Password"
-            placeholderTextColor="#6d6d6d"
-            secureTextEntry={!showPassword}
-            value={password} onChangeText={setPassword}
-            onFocus={() => ({
-              borderColor: '#e1e1e1',
-            })}
-          />
-          <MaterialCommunityIcons
-            name={showPassword ? 'eye-off' : 'eye'}
-            size={24}
-            color="#aaa"
-            onPress={toggleShowPassword}
-          />
-        </View>
-        <Text style={styles.subTitle}>Name</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Name"
-          value={name}
-          onChangeText={setName}
-        />
-        <Text style={styles.subTitle}>Surname</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Surname"
-          value={surname}
-          onChangeText={setSurname}
-        />
-        <Text style={styles.subTitle}>Email</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          value={email}
-          onChangeText={setEmail}
-        />
-        <View style={{
-          width: '75%',
-          flexDirection: 'row',
-          justifyContent: 'space-between', // Distribute content evenly with space on both ends
-          alignItems: 'center', // Align items at the top of the container
-          marginBottom: 20
-        }}>
-          <TouchableOpacity style={styles.profileButton} onPress={pickImage}>
-            <Text style={styles.buttonText}>Change profile picture</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
-            <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
-          </TouchableOpacity>
-        </View>
+    <ImageBackground source={require('../assets/images/background_image.jpg')}>
 
-        <TouchableOpacity style={styles.button} onPress={saveUserInfos}>
-          <Text style={styles.buttonText}>Save</Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.title}>Profile</Text>
+          {profilePicture && (
+            <Image source={{ uri: profilePicture }} style={styles.profilePicture} />
+          )}
+          <Text style={styles.subTitle}>Password</Text>
+          <View style={styles.passContainer}>
+            <TextInput style={{
+              width: '90%',
+              height: '100%',
+            }}
+              placeholder="Password"
+              placeholderTextColor="#6d6d6d"
+              secureTextEntry={!showPassword}
+              value={password} onChangeText={setPassword}
+              onFocus={() => ({
+                borderColor: '#e1e1e1',
+              })}
+            />
+            <MaterialCommunityIcons
+              name={showPassword ? 'eye-off' : 'eye'}
+              size={24}
+              color="#aaa"
+              onPress={toggleShowPassword}
+            />
+          </View>
+          <Text style={styles.subTitle}>Name</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Name"
+            value={name}
+            onChangeText={setName}
+          />
+          <Text style={styles.subTitle}>Surname</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Surname"
+            value={surname}
+            onChangeText={setSurname}
+          />
+          <Text style={styles.subTitle}>Email</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
+          />
+          <View style={{
+            width: '75%',
+            flexDirection: 'row',
+            justifyContent: 'space-between', // Distribute content evenly with space on both ends
+            alignItems: 'center', // Align items at the top of the container
+            marginBottom: 20
+          }}>
+            <TouchableOpacity style={styles.profileButton} onPress={pickImage}>
+              <Text style={styles.buttonText}>Change profile picture</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
+              <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
+            </TouchableOpacity>
+          </View>
+
+          <TouchableOpacity style={styles.button} onPress={saveUserInfos}>
+            <Text style={styles.buttonText}>Save</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
@@ -185,7 +188,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginBottom: 20,
     paddingHorizontal: 10,
-    backgroundColor: '#e1e1e1',
+    backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'black'
   },
@@ -199,7 +202,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#e1e1e1',
+    backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'black',
   },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
@@ -99,90 +99,91 @@ const AddItemScreen = ({ route }) => {
     }, []);
 
     return (
-        <ScrollView>
+        <ImageBackground source={require('../assets/images/background_image.jpg')}>
 
-            <View style={styles.container}>
-                <Text style={styles.title}>New Item</Text>
-                <Text style={styles.subTitle}>Name</Text>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Name"
-                    value={itemName}
-                    onChangeText={setItemName}
-                />
-                <Text style={styles.subTitle}>Description</Text>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Description"
-                    value={itemDescr}
-                    onChangeText={setItemDescr}
-                />
-                <Text style={styles.subTitle}>Price</Text>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Price"
-                    value={itemPrice}
-                    onChangeText={setItemPrice}
-                />
-                <Text style={styles.subTitle}>City</Text>
-                <TextInput
-                    style={styles.input}
-                    placeholder="City"
-                    value={itemCity}
-                    onChangeText={setItemCity}
-                />
-                <View style={{
-                    width: '60%',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between', // Distribute content evenly with space on both ends
-                    alignItems: 'center', // Align items at the top of the container
-                }}>
-                    <TouchableOpacity style={styles.button} onPress={pickImage}>
-                        <Text style={styles.buttonText}>Pick 3 Images</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
-                        <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
+            <ScrollView>
+                <View style={styles.container}>
+                    <Text style={styles.title}>New Item</Text>
+                    <Text style={styles.subTitle}>Name</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Name"
+                        value={itemName}
+                        onChangeText={setItemName}
+                    />
+                    <Text style={styles.subTitle}>Description</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Description"
+                        value={itemDescr}
+                        onChangeText={setItemDescr}
+                    />
+                    <Text style={styles.subTitle}>Price</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Price"
+                        value={itemPrice}
+                        onChangeText={setItemPrice}
+                    />
+                    <Text style={styles.subTitle}>City</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="City"
+                        value={itemCity}
+                        onChangeText={setItemCity}
+                    />
+                    <View style={{
+                        width: '60%',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between', // Distribute content evenly with space on both ends
+                        alignItems: 'center', // Align items at the top of the container
+                    }}>
+                        <TouchableOpacity style={styles.button} onPress={pickImage}>
+                            <Text style={styles.buttonText}>Pick 3 Images</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.cameraButton} onPress={takePhoto}>
+                            <Text style={styles.buttonText}><MaterialCommunityIcons name='camera' size={25} color='white' /></Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        margin: 10,
+                    }}>
+                        {images.length == 0 && (
+                            <View style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}>
+                                <Text style={{
+                                    fontSize: 15,
+                                    fontWeight: 'bold',
+                                    color: '#CF2027'
+                                }}>Images not uploaded </Text>
+                                <MaterialCommunityIcons name='alert' size={20} color='#CF2027' />
+                            </View>
+                        )}
+                        {images.length != 0 && (
+                            <View style={{
+                                flexDirection: 'row',
+                                alignItems: 'center'
+                            }}>
+                                <Text style={{
+                                    fontSize: 15,
+                                    fontWeight: 'bold',
+                                    color: '#1E9A48'
+                                }}>Images uploaded </Text>
+                                <MaterialCommunityIcons name='check-circle-outline' size={20} color='#1E9A48' />
+                            </View>
+                        )}
+                    </View>
+
+                    <TouchableOpacity style={styles.saveButton} onPress={saveItem}>
+                        <Text style={styles.buttonText}>Save</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: 10,
-                }}>
-                    {images.length == 0 && (
-                        <View style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
-                            <Text style={{
-                                fontSize: 15,
-                                fontWeight: 'bold',
-                                color: '#CF2027'
-                            }}>Images not uploaded </Text>
-                            <MaterialCommunityIcons name='alert' size={20} color='#CF2027' />
-                        </View>
-                    )}
-                    {images.length != 0 && (
-                        <View style={{
-                            flexDirection: 'row',
-                            alignItems: 'center'
-                        }}>
-                            <Text style={{
-                                fontSize: 15,
-                                fontWeight: 'bold',
-                                color: '#1E9A48'
-                            }}>Images uploaded </Text>
-                            <MaterialCommunityIcons name='check-circle-outline' size={20} color='#1E9A48' />
-                        </View>
-                    )}
-                </View>
-
-                <TouchableOpacity style={styles.saveButton} onPress={saveItem}>
-                    <Text style={styles.buttonText}>Save</Text>
-                </TouchableOpacity>
-            </View>
-        </ScrollView>
-
+            </ScrollView>
+        </ImageBackground>
     );
 };
 
@@ -209,7 +210,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         marginBottom: 20,
         paddingHorizontal: 10,
-        backgroundColor: '#e1e1e1',
+        backgroundColor: 'white',
         borderWidth: 1,
         borderColor: 'black'
     },
