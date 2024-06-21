@@ -26,7 +26,7 @@ they left off and personalize the app to their liking. AsyncStorage has been als
 - **Favorite Items** : Users can mark items as favorites for quick and easy access later. These selections are persisted using AsyncStorage, making your favorites readily available even after restarting the app.
 - **Photo Selection and Camera Access** : ¡SeBu! empowers users to choose photos for their listings or profile pictures from their device's storage. Additionally, the app provides the option to capture a new photo directly using the device's camera, offering more flexibility in how users present their items and themselves.
 
-## Screenshot
+## Screenshots
 
 <p align="center">
   <img src="https://github.com/Fedrosauro/SeBu-React-Native-App/assets/67149530/23312039-b6bf-4f85-8fc9-19b7ef11f02e">
