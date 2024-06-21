@@ -4,7 +4,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import emptyProfilePic from '../assets/images/black_profile_picture.png'
 
-
 const SignInForm = ({ navigation }) => {
 
     const [username, setUsername] = useState('');
@@ -114,8 +113,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     title: {
-        fontSize: 90,
+        fontSize: 120,
         marginBottom: 20,
+        fontStyle: 'italic',
+        fontWeight: 'bold',
     },
     subTitle: {
         fontSize: 15,
