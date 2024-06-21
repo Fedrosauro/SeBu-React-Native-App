@@ -8,6 +8,7 @@ const SignInForm = ({ navigation }) => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [showWarning, setShowWarning] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
     const handleSignIn = async (user) => {
@@ -55,7 +56,7 @@ const SignInForm = ({ navigation }) => {
         <ImageBackground
             source={require('../assets/images/background_image.jpg')}
             style={styles.container}
-            >
+        >
             <Text style={styles.title}>¡SeBu!</Text>
             <Text style={styles.subTitle}>Username</Text>
             <TextInput style={styles.input}
@@ -90,14 +91,22 @@ const SignInForm = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={() => handleRegistration(username, password)}>
                 <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
-            <Text style={styles.warningText}>For <Text style={{fontWeight: "bold"}}>testing purposes</Text> every time the application
-                starts these lines are executed in the <Text style={{fontWeight: "bold"}}>App.js</Text> file:{"\n"}
-                {"\t\t"}- <Text style={{fontWeight: "bold"}}>AsyncStorage.clear(); </Text>{"\n"} 
-                {"\t\t"}- <Text style={{fontWeight: "bold"}}>loadUsers();</Text>{"\n"}
-                {"\t\t"}- <Text style={{fontWeight: "bold"}}>loadPosts();</Text>{"\n"}
-                If you want to persist data, after the first lunch of the
-                application, comment those lines with <Text style={{fontWeight: "bold"}}>//</Text>
-            </Text>
+            <TouchableOpacity style={styles.warningButton} onPress={() => setShowWarning(!showWarning)}>
+                <Text style={{
+                    fontWeight: 'bold',
+                    fontSize: 13
+                }}>{showWarning ? "Hide warnings" : "Reveal warnings"}</Text>
+            </TouchableOpacity>
+            {showWarning && (
+                <Text style={styles.warningText}>
+                    For <Text style={{ fontWeight: "bold" }}>testing purposes</Text> every time the application
+                    starts these lines are executed in the <Text style={{ fontWeight: "bold" }}>App.js</Text> file:{"\n"}
+                    {"\t\t"}- <Text style={{ fontWeight: "bold" }}>AsyncStorage.clear(); </Text>{"\n"}
+                    {"\t\t"}- <Text style={{ fontWeight: "bold" }}>loadUsers();</Text>{"\n"}
+                    {"\t\t"}- <Text style={{ fontWeight: "bold" }}>loadPosts();</Text>{"\n"}
+                    If you want to persist data, after the first launch of the
+                    application, comment those lines with <Text style={{ fontWeight: "bold" }}>//</Text>
+                </Text>)}
         </ImageBackground>
     );
 };
@@ -165,7 +174,16 @@ const styles = StyleSheet.create({
         color: '#66554b',
         borderRadius: 15,
         borderWidth: 1,
-        borderColor: '#ffffe0'
+        borderColor: '#ffffe0',
+        margin: 10
+    },
+    warningButton: {
+        backgroundColor: 'white',
+        padding: 5,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'black',
+        marginBottom: 10
     }
 });
 
